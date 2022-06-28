@@ -1,0 +1,27 @@
+<div class="post-main posts-index">
+  <div class="post-container">
+    <div class="posts-show-item">
+      <div class="post-user-name">
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+      <p>
+        <%= @post.content %>
+      </p>
+      <% if @post.file.present? %> 
+        <%= audio_tag @post.file_url, :controls => true %>
+      <% end %>
+      <div class="post-time">
+        <%= @post.created_at %>
+      </div>
+      <div class="post-menus">
+        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+      </div>
+      <%= form_with(model:[@post, @comment], method: :post) do |f| %>
+        <%= f.text_area :comment_content %>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit 'コメントする' %>
+      <% end %>
+    </div>
+  </div>
+</div>

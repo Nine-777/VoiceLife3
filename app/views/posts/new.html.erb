@@ -1,0 +1,19 @@
+<div class="main post-main">
+  <div class="post-container">
+    <h1 class="form-heading">投稿する</h1>
+    <div class="form">
+      <% @post.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+      <%= form_for @post do |f| %>
+        <p style="background-color:#f5f8fa";>コンテンツ</p>
+        <%= f.text_area :content %>
+        <p style="background-color:#f5f8fa";>ファイル</p>
+        <%= f.file_field :file , :size => 140 %>
+        <%= f.submit "送信" %>
+      <% end %>
+    </div>  
+  </div>
+</div>

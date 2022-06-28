@@ -1,0 +1,25 @@
+<div class="user-main users-edit">
+  <div class="user-container">
+    <div class="form-heading">ユーザー情報の編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>            
+          <div class="form-error">            
+          <%= message %>            
+          </div>            
+        <% end %>
+      <%= form_tag user_path(@user), method: :put, multipart: true do %>
+        <p>ユーザー名</p>
+        <input name="name" value= "<%= @user.name %>">
+        <p>プロフィール</p>
+        <input name="profile" value= "<%= @user.self_introduction %>">
+        <p>画像</p>
+        <!--<input name="image" type="avatar">-->
+        <p>メールアドレス</p>
+        <input name="email" value="<%= @user.email %>">
+        <input type="submit" value="保存">
+      <% end %>  
+      </div>
+    </div>
+  </div>
+</div>
