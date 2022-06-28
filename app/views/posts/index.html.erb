@@ -1,0 +1,23 @@
+<div class="post-main posts-index">
+  <div style='text-align: center;'>
+    <%= form_with url: search_path, method: :get, local: true do |f| %>
+      <%= f.text_field :keyword, value: @keyword %>
+      <%= f.submit "検索" %>
+    <% end %>
+  </div>
+  <div class="post-container">
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-right">
+        <div class="post-user-name">
+          <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+        </div> 
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+        <% if post.file.present? %> 
+          <%= audio_tag post.file_url, :controls => true %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

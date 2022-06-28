@@ -1,0 +1,24 @@
+<div class="user-main user-show">
+  <div class="user-container">
+    <div class="user">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.self_introduction %></p>
+      <% if current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      <% end %>
+    </div>
+    <ul class="user-tabs">
+      <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
+    </ul>
+    <% @user.posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+          </div>
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
