@@ -51,7 +51,6 @@ test:
 #
 production:
   <<: *default
-  charset: utf8
   database: <%= ENV['VOICELIFE_DATABASE_NAME'] %>
   username: <%= ENV['VOICELIFE_DATABASE_USERNAME'] %>
   password: <%= ENV['VOICELIFE_DATABASE_PASSWORD'] %>
