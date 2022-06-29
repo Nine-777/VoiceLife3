@@ -56,5 +56,3 @@ production:
   password: <%= ENV['VOICELIFE_DATABASE_PASSWORD'] %>
   host: <%= ENV['VOICELIFE_DATABASE_HOSTNAME'] %>
   port: <%= ENV['VOICELIFE_DATABASE_PORT'] %>
-  socket: /var/lib/mysql/mysql.sock
-
