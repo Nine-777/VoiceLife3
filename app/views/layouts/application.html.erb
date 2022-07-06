@@ -16,7 +16,6 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
   </head>
 
   <%= csrf_meta_tags %>
@@ -36,7 +35,7 @@
               <%= link_to("新規投稿", new_post_path, class: "nav-item",class: "nav-link") %>
               <%= link_to("投稿一覧", posts_path, class: "nav-item",class: "nav-link") %>
               <!--<li class="nav-item"><a class="nav-link" href= >ログアウト</a></li>-->
-              <%= link_to 'ログアウト', destroy_user_session_path, class: 'nav-item', class: 'nav-link', method: :delete %>
+              <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-item",class: "nav-link", method: :delete %>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">お問い合せ</a></li>-->
             </ul>
           <% else %>
@@ -47,7 +46,7 @@
               <%= link_to("新規登録", new_user_registration_path, class: "nav-item",class: "nav-link") %>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">ログイン</a></li>-->
               <%= link_to("ログイン", new_user_session_path, class: "nav-item",class: "nav-link") %>
-              <%= button_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, {method: :post, class: "nav-item", class: "nav-link" } %>
+              <%= button_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, {method: :post, class: "nav-item",class: "nav-link" } %>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">お問い合せ</a></li>-->
           <% end %>
         </div>
