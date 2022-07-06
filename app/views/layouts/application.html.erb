@@ -6,8 +6,6 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>VoiceLife</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
@@ -16,7 +14,6 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
   </head>
 
   <%= csrf_meta_tags %>
@@ -32,11 +29,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <% if current_user %>
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
-              <%= link_to(current_user.name, "/users/#{current_user.id}" , class: "nav-item",class: "nav-link") %>
-              <%= link_to("新規投稿", new_post_path, class: "nav-item",class: "nav-link") %>
-              <%= link_to("投稿一覧", posts_path, class: "nav-item",class: "nav-link") %>
+              <%= link_to(current_user.name, "/users/#{current_user.id}" , class: "nav-item nav-link") %>
+              <%= link_to("新規投稿", new_post_path, class: "nav-item nav-link") %>
+              <%= link_to("投稿一覧", posts_path, class: "nav-item nav-link") %>
               <!--<li class="nav-item"><a class="nav-link" href= >ログアウト</a></li>-->
-              <%= link_to 'ログアウト', destroy_user_session_path, class: 'nav-item', class: 'nav-link', method: :delete %>
+              <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-item nav-link", method: :delete %>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">お問い合せ</a></li>-->
             </ul>
           <% else %>
@@ -44,10 +41,10 @@
               <a class="nav-link" class="nav-item" href="#about">VoiceLifeとは</a></li>
               <a class="nav-link" href="#services">できること</a></li>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">新規登録</a></li>-->
-              <%= link_to("新規登録", new_user_registration_path, class: "nav-item",class: "nav-link") %>
+              <%= link_to("新規登録", new_user_registration_path, class: "nav-item nav-link") %>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">ログイン</a></li>-->
-              <%= link_to("ログイン", new_user_session_path, class: "nav-item",class: "nav-link") %>
-              <%= button_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, {method: :post, class: "nav-item", class: "nav-link" } %>
+              <%= link_to("ログイン", new_user_session_path, class: "nav-item nav-link") %>
+              <%= button_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, {method: :post, class: "nav-item nav-link" } %>
               <!--<li class="nav-item"><a class="nav-link" href="#contact">お問い合せ</a></li>-->
           <% end %>
         </div>
