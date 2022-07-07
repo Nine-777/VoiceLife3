@@ -24,7 +24,7 @@
           <% if current_user %>
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
               <%= link_to(current_user.name, "/users/#{current_user.id}" , class: "nav-item nav-link") %>
-              <%= link_to("新規投稿", new_post_path, class: "nav-item nav-link") %>
+              <%= link_to("新規投稿", new_post_path, class: "nav-buttom") %>
               <%= link_to("投稿一覧", posts_path, class: "nav-item nav-link") %>
               <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-item nav-link", method: :delete %>
             </ul>
