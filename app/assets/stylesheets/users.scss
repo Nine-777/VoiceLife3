@@ -52,7 +52,7 @@
     background-size: cover;
     // padding-top: 10rem;
     padding-bottom: calc(10rem - 0rem);
-    background: linear-gradient(to bottom, rgba(213, 213, 213, 0.896) 0%, rgba(213, 213, 213, 0.896));
+    background: linear-gradient(to bottom, rgba(238, 238, 238, 0.896) 0%, rgba(238, 238, 238, 0.896));
   }
 
   .user-container {
@@ -67,8 +67,9 @@
     text-align: center;
   }
   
-  .user {
+  .user-profile {
     margin-bottom: 20px;
+    font-weight: 600;
   }
   
   .user img {
