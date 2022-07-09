@@ -72,4 +72,4 @@ class PostsController < ApplicationController
       render "index"
     end
   
-    end
+end
