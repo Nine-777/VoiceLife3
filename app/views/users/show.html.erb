@@ -7,9 +7,9 @@
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
       <% end %>
     </div>
-    <ul class="user-tabs">
+    <!--<ul class="user-tabs">
       <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
-    </ul>
+    </ul>-->
     <% @user.posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-right">
@@ -17,6 +17,15 @@
             <%= link_to(post.user.name, "/users/#{post.user.id}") %>
           </div>
           <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      </div>
+    <% end %>
+    <% @user.liked_posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-right">
+          <p>いいねリスト</p>
+          <%= post.user.name %>
+          <%= post.content %>
         </div>
       </div>
     <% end %>

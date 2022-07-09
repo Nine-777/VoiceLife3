@@ -17,6 +17,7 @@
         <% if post.file.present? %> 
           <%= audio_tag post.file_url, :controls => true %>
         <% end %>
+        いいね数：<%= post.liked_users.count %>
       </div>
     <% end %>
   </div>

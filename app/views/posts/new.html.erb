@@ -8,9 +8,9 @@
         </div>
       <% end %>
       <%= form_for @post do |f| %>
-        <p style="background-color:#f5f8fa";>コンテンツ</p>
+        <p>テキスト</p>
         <%= f.text_area :content %>
-        <p style="background-color:#f5f8fa";>ファイル</p>
+        <p>音声</p>
         <%= f.file_field :file , :size => 140 %>
         <%= f.submit "送信" %>
       <% end %>

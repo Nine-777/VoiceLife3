@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments, only: [:create]
   end
+  resources :posts, only: [:index, :show, :create] do
+    resources :likes, only: [:create, :destroy]
+  end
   get 'search' => 'posts#search'
 end

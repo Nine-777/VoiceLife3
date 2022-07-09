@@ -19,6 +19,7 @@
   background-attachment: scroll;
   background-size: cover;
   padding-top: 3rem;
+  padding-bottom: calc(10rem - 0rem);
   background: linear-gradient(to bottom, rgba(238, 238, 238, 0.896) 0%, rgba(238, 238, 238, 0.896));
   }
 
@@ -30,8 +31,9 @@
     min-height: 74vh;
   }
   
-  .post-user-name a {
+  .post-user-name {
     font-weight: 600;
+    color: rgb(66, 55, 55);
   }
   
   .post-user-name a:hover {
@@ -52,7 +54,7 @@
     width: 100%;
     height: 100%;
     padding-bottom: 32px;
-    color: red;
+    color: rgb(66, 55, 55);
   }
 
   .submit-var {
