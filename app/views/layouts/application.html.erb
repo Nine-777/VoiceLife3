@@ -5,7 +5,7 @@
     <title>VoiceLife</title>
     <%= csrf_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>  
+    <%= javascript_pack_tag 'application' %>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
@@ -24,15 +24,22 @@
           <% if current_user %>
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
               <%= link_to(current_user.name, "/users/#{current_user.id}" , class: "nav-item nav-link") %>
+              <% if current_user.avatar? %>
+                <%= image_tag current_user.avatar.url, class: 'user-image' %>
+              <% else %>
+                <%= image_tag "/assets/default.png", class: 'user-image' %>
+              <% end %>
               <%= link_to("新規投稿", new_post_path, class: "nav-buttom") %>
               <%= link_to("投稿一覧", posts_path, class: "nav-item nav-link") %>
               <%= link_to 'ログアウト', destroy_user_session_path, class: "nav-item nav-link", method: :delete %>
             </ul>
           <% else %>
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
+              <a class="nav-link" class="nav-item" href="#about">VoiceLifeとは</a></li>
+              <a class="nav-link" href="#services">できること</a></li>
               <%= link_to("新規登録", new_user_registration_path, class: "nav-item nav-link") %>
               <%= link_to("ログイン", new_user_session_path, class: "nav-item nav-link") %>
-              <%= button_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, {method: :post, class: "nav-item nav-link"} %>
+              <%= button_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, {method: :post, class: "nav-buttom"} %>
           <% end %>
         </div>
       </div>
