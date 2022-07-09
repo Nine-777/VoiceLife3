@@ -9,8 +9,8 @@ class PostsController < ApplicationController
       @user = User.find_by(id: @post.user_id)
       @post = Post.find(params[:id])
       @like = Like.new
-      # @comments = @post.comments
-      # @comment = current_user.comments.new
+      @comments = @post.comments
+      @comment = current_user.comments.new
       # @likes_count = Like.where(post_id: @post.id).count
     end
   
