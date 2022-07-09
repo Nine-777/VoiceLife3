@@ -27,6 +27,20 @@
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
         <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
       </div>
+      <h2>コメント一覧</h2>
+      <% @comments.each do |c| %>
+        <div>
+          <a href="/users/<%= @post.user.id %>"><%= c.user.email %></a>
+          <%= c.comment %>
+          <hr>
+        </div>
+      <% end %>
+      <%= form_with model: @comment, url: comments_path do |f| %>
+        <%= hidden_field_tag 'comment[post_id]', @post.id %>
+        <%= f.text_field :comment %>
+        <br>
+        <%= f.submit 'コメントする' %>
+      <% end %>
     </div>
   </div>
 </div>
