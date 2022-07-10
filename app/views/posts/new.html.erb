@@ -8,11 +8,10 @@
         </div>
       <% end %>
       <%= form_for @post do |f| %>
-        <p>テキスト</p>
-        <%= f.text_area :content %>
+        <%= f.text_area :content, :size=>"70x5", :placeholder => "コメント" %>
         <p>音声</p>
         <%= f.file_field :file , :size => 140 %>
-        <%= f.submit "送信" %>
+        <%= f.submit "送信", class: 'submit-btn' %>
       <% end %>
     </div>  
   </div>
