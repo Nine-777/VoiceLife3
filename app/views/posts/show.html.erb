@@ -7,18 +7,22 @@
       <p>
         <%= @post.content %>
       </p>
-      <p>いいね件数: <%= @post.likes.count %></p>
-      <% if current_user.already_liked?(@post) %>
-        <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
-      <% else %>
-        <%= button_to 'いいね', post_likes_path(@post) %>
+      <% if @post.file.present? %> 
+        <%= audio_tag @post.file_url, :controls => true %>
       <% end %>
+      <% if current_user.already_liked?(@post) %>
+        <%= link_to post_like_path(@post), method: :delete do %>
+          <i class="fas fa-heart unlike-btn" ></i>
+        <% end %>
+      <% else %>
+        <%= link_to post_likes_path(@post), method: :post do %>
+          <i class="fas fa-heart like-btn" ></i>
+        <% end %>
+      <% end %>
+      <%= @post.likes.count %>
       <p>いいねしたユーザー</p>
       <% @post.liked_users.each do |user| %>
         <li><%= user.name %></li>
-      <% end %>
-      <% if @post.file.present? %> 
-        <%= audio_tag @post.file_url, :controls => true %>
       <% end %>
       <div class="post-time">
         <%= @post.created_at %>
@@ -30,7 +34,7 @@
       <h2>コメント一覧</h2>
       <% @comments.each do |c| %>
         <div>
-          <a href="/users/<%= @post.user.id %>"><%= c.user.email %></a>
+          <a href="/users/<%= @post.user.id %>"><%= c.user.name %></a>
           <%= c.comment %>
           <hr>
         </div>
