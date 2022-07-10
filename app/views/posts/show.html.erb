@@ -20,10 +20,6 @@
         <% end %>
       <% end %>
       <%= @post.likes.count %>
-      <p>いいねしたユーザー</p>
-      <% @post.liked_users.each do |user| %>
-        <li><%= user.name %></li>
-      <% end %>
       <div class="post-time">
         <%= @post.created_at %>
       </div>
@@ -31,6 +27,10 @@
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
         <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
       </div>
+      <p>いいねしたユーザー</p>
+      <% @post.liked_users.each do |user| %>
+        <%= user.name %>
+      <% end %>
       <h2>コメント一覧</h2>
       <% @comments.each do |c| %>
         <div>

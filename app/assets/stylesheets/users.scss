@@ -45,16 +45,6 @@
   }
   
   /* users/show ================================ */
-  .user-main {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    // padding-top: 10rem;
-    padding-bottom: calc(10rem - 0rem);
-    background: linear-gradient(to bottom, rgba(238, 238, 238, 0.896) 0%, rgba(238, 238, 238, 0.896));
-  }
-
   .user-container {
     max-width: 600px;
     margin: 0px auto;
@@ -63,8 +53,18 @@
     min-height: 74vh;
   }
 
-  .user-show {
-    text-align: center;
+  .user-main {
+    background: rgb(218, 218, 218) url(https://goo.gl/DM5s4f) center no-repeat;
+    background-size: cover;
+    height: calc(100% + 40px);
+    position: relative;
+    width: calc(100% + 40px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-bottom: calc(10rem - 0rem);
+    padding-top: 10rem;
   }
 
   .user-image {
@@ -75,6 +75,27 @@
   .user-profile {
     margin-bottom: 20px;
     font-weight: 600;
+  }
+
+  .user-profile h2 {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin: 0 auto;
+  padding: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  .user-profile p {
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 5px 0 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
   }
   
   .user img {

@@ -57,16 +57,32 @@
     color: rgb(66, 55, 55);
   }
 
-  .submit-var {
-    border-radius: 1rem;
-    border-color:rgba(78, 78, 78, 0.896);
-    margin-right: 15px;
-    width: 300px;
-    height: 40px;
+  .submit-bar {
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #acacac;
+    padding: 3px 5px;
+    border-radius: 20px;
+    height: 2.2em;
+    width: 265px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    outline: 0;
   }
 
   .submit-btn {
-    color: rgb(42, 41, 41);
+    font-size: 1.0em;
+    border: none;
+    background: #fd6339;
+    border: 1px solid #fd6339;
+    border-radius: 3px;
+    color: #fff;
+    outline : none;
+    width: 3.5em;
+    height: 1.9em;
+    display: inline-block;
+    vertical-align: middle;  
   }
   
   /* posts/show ================================ */
