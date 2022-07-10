@@ -164,3 +164,17 @@
     padding-bottom: calc(10rem - 4.5rem);
     background: linear-gradient(to bottom, rgba(238, 238, 238, 0.896) 0%, rgba(238, 238, 238, 0.896));
   }
+
+  .comment-btn {
+    font-size: 1.0em;
+    border: none;
+    background: #fd6339;
+    border: 1px solid #fd6339;
+    border-radius: 3px;
+    color: #fff;
+    outline : none;
+    width: 5.0em;
+    height: 1.9em;
+    display: inline-block;
+    vertical-align: middle;  
+  }

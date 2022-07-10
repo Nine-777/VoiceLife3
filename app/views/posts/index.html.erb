@@ -2,7 +2,7 @@
   <div style='text-align: center;'>
     <%= form_with url: search_path, method: :get, local: true do |f| %>
       <%= f.text_field :keyword, value: @keyword , class: 'submit-bar' , :placeholder => "キーワード検索" %>
-      <%= f.submit "検索" , class: 'submit-btn ' %>
+      <%= f.submit "検索" , class: 'submit-btn' %>
     <% end %>
   </div>
   <div class="post-container">
@@ -10,6 +10,7 @@
       <div class="posts-index-item">
         <div class="post-right">
         <div class="post-user-name">
+          <!--img src="<%= "/uploads/user/#{post.user.avatar}" %>">-->
           <%= link_to(post.user.name, "/users/#{post.user.id}") %>
         </div> 
           <%= link_to(post.content, "/posts/#{post.id}") %>

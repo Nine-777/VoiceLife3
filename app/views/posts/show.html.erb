@@ -31,19 +31,19 @@
       <% @post.liked_users.each do |user| %>
         <%= user.name %>
       <% end %>
-      <h2>コメント一覧</h2>
+      <h4>コメント一覧</h4>
       <% @comments.each do |c| %>
         <div>
           <a href="/users/<%= @post.user.id %>"><%= c.user.name %></a>
           <%= c.comment %>
+          <%= c.created_at %>
           <hr>
         </div>
       <% end %>
       <%= form_with model: @comment, url: comments_path do |f| %>
         <%= hidden_field_tag 'comment[post_id]', @post.id %>
         <%= f.text_field :comment %>
-        <br>
-        <%= f.submit 'コメントする' %>
+        <%= f.submit 'コメント', class: 'comment-btn' %>
       <% end %>
     </div>
   </div>
