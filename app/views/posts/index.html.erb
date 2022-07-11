@@ -9,10 +9,10 @@
     <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-right">
-        <div class="post-user-name">
-          <!--img src="<%= "/uploads/user/#{post.user.avatar}" %>">-->
-          <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-        </div> 
+          <div class="post-user-name">
+            <%= image_tag post.user.avatar.url, class: 'user-image' %>
+            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+          </div> 
           <%= link_to(post.content, "/posts/#{post.id}") %>
         </div>
         <% if post.file.present? %> 

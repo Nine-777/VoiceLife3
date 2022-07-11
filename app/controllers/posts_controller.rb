@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :current_user, {only: [:edit, :update, :destroy]}
+  before_action :check_user, {only: [:edit, :update, :destroy]}
  
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
@@ -20,11 +21,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(
-      content: params[:post][:content],
-      user_id: current_user.id,
-      file: params[:post][:file]
-    )
+    @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "投稿を作成しました"
       redirect_to posts_path
@@ -72,5 +69,23 @@ class PostsController < ApplicationController
     @keyword = params[:keyword]
     render "index"
   end
-  
+
+  private
+
+  def post_params
+    {
+      content: params[:post][:content],
+      user_id: current_user.id,
+      file: params[:post][:file]
+    }
+  end
+
+  def check_user
+    @post = Post.find params[:id]
+    if current_user.id != @post.user_id
+      flash[:notice] = "権限がありません"
+      redirect_to root_path
+    end
+  end
+
 end
