@@ -2,7 +2,8 @@
   <div class="post-container">
     <div class="posts-show-item">
       <div class="post-user-name">
-        <%= link_to(@user.name, "/users/#{@user.id}") %>
+        <%= image_tag @post.user.avatar.url, class: 'user-image' %>
+        <%= link_to(@user.name, "/users/#{@user.id}", style: "color: black;") %>
       </div>
       <p>
         <%= @post.content %>

@@ -3227,6 +3227,12 @@ textarea.form-control-lg {
   color: #000;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
 }
 .btn-light:hover {
   color: #000;
@@ -7377,6 +7383,7 @@ textarea.form-control-lg {
 
 .mb-2 {
   margin-bottom: 0.5rem !important;
+  color: orangered;
 }
 
 .mb-3 {
@@ -7727,8 +7734,7 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: red;
 }
 
 .text-secondary {
