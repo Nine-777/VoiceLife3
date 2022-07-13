@@ -1,6 +1,6 @@
 <div class="main post-main">
-  <div class="post-container">
-    <h1 class="form-heading">投稿する</h1>
+  <div class="post-new-container">
+    <p class="post-new-heading">投稿する</p>
     <div class="form">
       <% @post.errors.full_messages.each do |message| %>
         <div class="form-error">
@@ -8,10 +8,10 @@
         </div>
       <% end %>
       <%= form_for @post do |f| %>
-        <%= f.text_area :content, :size=>"70x5", :placeholder => "コメント" %>
+        <%= f.text_area :content, :size=>"60x5", :placeholder => "コメント" %>
         <p>音声</p>
         <%= f.file_field :file , :size => 140 %>
-        <%= f.submit "送信", class: 'submit-btn' %>
+        <%= f.submit "送信", class: 'post-new-btn' %>
       <% end %>
     </div>  
   </div>
