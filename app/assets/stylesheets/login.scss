@@ -37,6 +37,12 @@ cursor: pointer;
 color: white;
 }
 
+.card-header2 h3{
+  padding: 15px;
+  color: white;
+  margin-bottom: -10px;
+}
+
 .social_icon{
 position: absolute;
 right: 20px;
@@ -70,8 +76,16 @@ margin-right: 5px;
 
 .login_btn{
 color: black;
-background-color: #FFC312;
 width: 100px;
+height: 40px;
+font-size: 1.0em;
+border: none;
+background: #fd6339;
+border-radius: 3px;
+color: #fff;
+outline : none;
+display: inline-block;
+vertical-align: middle; 
 }
 
 .login_btn:hover{
