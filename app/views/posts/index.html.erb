@@ -1,10 +1,4 @@
 <div class="post-main posts-index">
-  <div style='text-align: center;'>
-    <%= form_with url: search_path, method: :get, local: true do |f| %>
-      <%= f.text_field :keyword, value: @keyword , class: 'submit-bar' , :placeholder => "キーワード検索" %>
-      <%= f.submit "検索" , class: 'submit-btn' %>
-    <% end %>
-  </div>
   <div class="post-container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
