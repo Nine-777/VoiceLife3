@@ -1,13 +1,16 @@
 <div class="post-main posts-index">
   <div class="post-container">
     <div class="posts-show-item">
-      <div class="post-user-name">
+      <div class="post-show-avatar">
         <%= image_tag @post.user.avatar.url, class: 'user-image' %>
+      </div>
+      <div class="post-show-name">
         <%= link_to(@user.name, "/users/#{@user.id}", style: "color: black;") %>
       </div>
-      <p>
+      <br>
+      <div class="post-show-content">
         <%= @post.content %>
-      </p>
+      </div>
       <% if @post.file.present? %> 
         <%= audio_tag @post.file_url, :controls => true %>
       <% end %>
@@ -22,7 +25,7 @@
       <% end %>
       <%= @post.likes.count %>
       <div class="post-time">
-        <%= @post.created_at %>
+        <%= @post.created_at.to_s(:datetime_jp) %>
       </div>
       <div class="post-menus">
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
