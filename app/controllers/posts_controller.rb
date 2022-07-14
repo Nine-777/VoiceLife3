@@ -3,6 +3,8 @@ class PostsController < ApplicationController
  
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
+    @q = Post.ransack(params[:q])
+    @post = @q.result(distinct: true)
   end
 
   def show
@@ -68,9 +70,6 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword])
-    @keyword = params[:keyword]
-    render "index"
   end
   
 end
