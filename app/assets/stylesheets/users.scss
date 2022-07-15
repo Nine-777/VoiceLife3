@@ -162,7 +162,13 @@
     color: #afb6bf;
   }
   
-  /* users/new, users/edit ================================ */
+  /* users/new ================================ */
   .users-form input {
     margin-bottom: 15px;
+  }
+
+  /* users/edit ================================ */
+  .user-edit-heading {
+    color: rgb(54, 52, 52) ;
+    font-size: 30px;
   }

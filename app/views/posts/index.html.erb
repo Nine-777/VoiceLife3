@@ -2,13 +2,13 @@
   <div class="post-container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
-        <div class="post-leght">
+        <div class="post-left">
           <div class="post-user-avatar">
             <%= image_tag post.user.avatar.url, class: 'user-image', size: '500x240' %>
           </div> 
           <div class="post-user-name">
             <%= link_to(post.user.name, "/users/#{post.user.id}", style: "color: black;") %>
-          </div> 
+          </div>
         </div>
         <div class="post-user-content">
           <%= link_to(post.content, "/posts/#{post.id}", style: "color: black;") %>
@@ -27,6 +27,9 @@
         </div> 
         <div class="post-user-heart-count"> 
           <%= post.liked_users.count %>
+        </div>
+        <div class="post-user-right">
+          <%= post.user.created_at.to_s(:datetime_jp) %>
         </div>
       </div>
     <% end %>
