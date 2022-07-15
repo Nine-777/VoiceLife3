@@ -1,18 +1,21 @@
-<div class="post-main posts-new">
-  <div class="post-container">
-    <h1 class="form-heading">編集する</h1>
-    <%= form_tag(post_path(@post), method: :put ) do %>
-    <div class="form">
-      <div class="form-body">
-        <% @post.errors.full_messages.each do |message| %>
-          <div class="form-error">
-            <%= message %>
-          </div>
-        <% end %>
-        <textarea name="content"><%= @post.content %></textarea>
-        <input type="submit" value="保存">
+<div class="post-main">
+  <div class="post-edit-container">
+      <h1 class="post-new-heading">編集する</h1>
+      <%= form_tag(post_path(@post), method: :put ) do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <div class="post-edit-textarea">
+            <textarea name="content" rows="5" cols="60"><%= @post.content %></textarea>
+          </div>  
+          <input type="submit" value="保存", class= 'post-edit-btn'>
+        </div>
       </div>
-    </div>
-    <% end %>
+      <% end %>
+    </div>  
   </div>
 </div>

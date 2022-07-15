@@ -235,6 +235,7 @@
     outline: none;
     display: inline-block;
     vertical-align: middle;
+    margin-left: 95px;
   }
   
   .posts-new textarea::-webkit-input-placeholder {
@@ -264,4 +265,34 @@
 
   .card {
     display: flex;
+  }
+
+  /* posts/show ================================ */
+
+  .post-edit-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 20px 30px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+  
+  .post-edit-btn {
+    color: black;
+    width: 100px;
+    height: 40px;
+    font-size: 1.0em;
+    border: none;
+    background: #fd6339;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-top: 10px;
+    margin-right: 7px;
   }
