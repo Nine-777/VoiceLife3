@@ -181,7 +181,7 @@
   
   /* users/new ================================ */
   .users-form input {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .user-show-item {
@@ -199,7 +199,54 @@
   }
 
   /* users/edit ================================ */
+
+  .user-edit-main {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 335px;
+    background: linear-gradient(rgba(238, 238, 238, 0.896) 0%, rgba(238, 238, 238, 0.896));
+    display: flex;
+  }
+
+  .user-edit-container {
+    max-width: 800px;
+    min-height: 50vh;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-edit-item {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+    width: 650px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .user-edit-heading {
     color: rgb(54, 52, 52) ;
     font-size: 30px;
+  }
+
+  .user-edit-btn {
+    color: black;
+    width: 100px;
+    height: 40px;
+    font-size: 1.0em;
+    border: none;
+    background: #fd6339;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-right: 50px;
+    margin-bottom: -70px;
   }

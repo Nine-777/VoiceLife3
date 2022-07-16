@@ -1,24 +1,28 @@
-<div class="user-main">
-  <div class="user-container">
-    <div class="user-edit-heading">ユーザー情報の編集</div>
-    <div class="form users-form">
-      <div class="form-body">
-        <% @user.errors.full_messages.each do |message| %>            
-          <div class="form-error">            
-          <%= message %>            
-          </div>            
-        <% end %>
-      <%= form_tag user_path(@user), method: :put, multipart: true do %>
-        <p>ユーザー名</p>
-        <input name="name" value= "<%= @user.name %>">
-        <p>プロフィール</p>
-        <input name="profile" value= "<%= @user.self_introduction %>">
-        <p>画像</p>
-        <input name="avatar" type="file">
-        <p>メールアドレス</p>
-        <input name="email" value="<%= @user.email %>">
-        <input type="submit" value="保存">
-      <% end %>  
+<div class="user-edit-main">
+  <div class="user-edit-container">
+    <div class="user-edit-item">
+      <div class="user-edit-heading">
+        <p>ユーザー情報の編集</p>
+      </div>
+      <div class="form users-form">
+        <div class="form-body">
+          <% @user.errors.full_messages.each do |message| %>            
+            <div class="form-error">            
+            <%= message %>            
+            </div>            
+          <% end %>
+        <%= form_tag user_path(@user), method: :put, multipart: true do %>
+          <p>ユーザー名</p>
+          <input name="name" value= "<%= @user.name %>">
+          <p>プロフィール</p>
+          <input name="profile" value= "<%= @user.self_introduction %>">
+          <p>画像</p>
+          <input name="avatar" type="file">
+          <p>メールアドレス</p>
+          <input name="email" value="<%= @user.email %>">
+          <input type="submit" value="保存" class= 'user-edit-btn'>
+        <% end %>  
+        </div>
       </div>
     </div>
   </div>
