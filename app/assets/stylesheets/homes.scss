@@ -158,15 +158,6 @@ p {
   margin-bottom: 1rem;
 }
 
-abbr[title],
-abbr[data-bs-original-title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  cursor: help;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-}
-
 address {
   margin-bottom: 1rem;
   font-style: normal;
@@ -4734,11 +4725,6 @@ textarea.form-control-lg {
   border-top-right-radius: calc(0.3rem - 1px);
 }
 
-.modal-title {
-  margin-bottom: 0;
-  line-height: 1.5;
-}
-
 .modal-body {
   position: relative;
   flex: 1 1 auto;
@@ -5469,11 +5455,6 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1rem;
-}
-
-.offcanvas-title {
-  margin-bottom: 0;
-  line-height: 1.5;
 }
 
 .offcanvas-body {

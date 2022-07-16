@@ -1,9 +1,15 @@
 class PostsController < ApplicationController
+  require "open-uri"
   before_action :current_user, {only: [:edit, :update, :destroy]}
  
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
+    api = Rails.application.credentials.news_api[:api_key]
+    encoded_str = URI.encode_www_form(q: 'voice')
+    uri = URI.parse("https://newsapi.org/v2/everything?#{encoded_str}&sortBy=popularity&pageSize=5&apiKey=#{api}")
+    article_serialized = uri.read
+    @articles = JSON.parse(article_serialized)
   end
 
   def show
