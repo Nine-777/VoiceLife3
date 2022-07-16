@@ -1,14 +1,16 @@
 <div class="post-main">
   <div class="user_new_card" style="width: 20rem;">
-    <h3>いいねランキング</h3>
+    <h4>いいねランキング</h4>
     <% @all_ranks.each.with_index(1) do |post, i| %>
       <%= i %>位
-      <%= image_tag post.user.avatar.url, class: 'user-image', size: '500x240' %>
-      <%= post.user.name %>
-      <i class="fas fa-heart unlike-btn" ></i>
-      <%= post.likes.count %>
+      <%= image_tag post.user.avatar.url, class: 'rank-image', size: '500x240' %>
+      <%= link_to(post.user.name, "/users/#{post.user.id}", style: "color: white;") %>
       <div class="card-body">
-        <h5 class="card-title"><%= post.content %></h5>
+        <h6 class="card_content">
+          <%= post.content %>
+          <i class="fas fa-heart unlike-btn" ></i>
+          <%= post.likes.count %>
+        </h6>
       </div>
     <% end %>
   </div>    
@@ -16,9 +18,7 @@
     <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="post-left">
-          <div class="post-user-avatar">
-            <%= image_tag post.user.avatar.url, class: 'user-image', size: '500x240' %>
-          </div> 
+          <%= image_tag post.user.avatar.url, class: 'post-index-image' %>
           <div class="post-user-name">
             <%= link_to(post.user.name, "/users/#{post.user.id}", style: "color: black;") %>
           </div>
@@ -47,6 +47,8 @@
       </div>
     <% end %>
     <br>
-    <%= paginate @posts %>
+    <div class="paginate">
+      <%= paginate @posts %>
+    </div>
   </div>
 </div>

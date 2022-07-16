@@ -68,8 +68,20 @@
   }
 
   .user-image {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .post-index-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    margin-left: -40px;
+  }
+
+  .post-show-image {
+    width: 50px;
+    height: 50px;
   }
 
   .user-image-header {
