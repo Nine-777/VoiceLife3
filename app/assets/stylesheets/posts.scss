@@ -11,9 +11,9 @@
 
   .post-index-container {
     max-width: 800px;
-    margin: 20px 380px;
-    padding-right: 15px;
     min-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .posts-index-item {
@@ -35,7 +35,7 @@
   }
 
   .post-container {
-    max-width: 600px;
+    width: 600px;
     margin: 20px 420px;
     padding-left: 15px;
     padding-right: 15px;
@@ -153,11 +153,13 @@
   }
   
   .posts-show-item {
-    margin-left: 80px;
     padding: 30px;
     background-color: white;
     box-shadow: 0 2px 6px #c1ced7;
+    width: 600px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .post-show-content {
@@ -174,7 +176,7 @@
   
   .post-time {
     color: #8899a6;
-    margin-bottom: 10px;
+    float: right;
   }
   
   .unliked-btn {
@@ -192,12 +194,12 @@
 
   .post-menus {
     float: right;
+    margin-top: 30px;
+    margin-right: -206px;
   }
   
   .post-menus a, .post-menus input {
     color: #8899a6;
-    text-decoration: underline;
-    font-size: 14px;
   }
 
   .liked_user {
