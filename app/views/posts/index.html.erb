@@ -1,4 +1,17 @@
 <div class="post-main">
+  <div class="user_new_card" style="width: 20rem;">
+    <h3>いいねランキング</h3>
+    <% @all_ranks.each.with_index(1) do |post, i| %>
+      <%= i %>位
+      <%= image_tag post.user.avatar.url, class: 'user-image', size: '500x240' %>
+      <%= post.user.name %>
+      <i class="fas fa-heart unlike-btn" ></i>
+      <%= post.likes.count %>
+      <div class="card-body">
+        <h5 class="card-title"><%= post.content %></h5>
+      </div>
+    <% end %>
+  </div>    
   <div class="post-container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">

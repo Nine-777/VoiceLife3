@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'likes_ranking/index'
   get 'comments/create'
   get 'comments/destroy'
   root "homes#index"

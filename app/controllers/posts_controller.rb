@@ -3,6 +3,7 @@ class PostsController < ApplicationController
  
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
+    @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
   end
 
   def show
