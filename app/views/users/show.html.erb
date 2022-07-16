@@ -1,6 +1,6 @@
 <div class="post-main posts-index">
   <div class="post-container">
-    <div class="posts-show-item">
+    <div class="user-show-item">
       <%= image_tag @user.avatar.url, class: 'user-image' %>
       <h2><%= @user.name %></h2>
       <p><%= @user.self_introduction %></p>
@@ -12,7 +12,7 @@
       <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
     </ul>-->
     <% @user.posts.each do |post| %>
-      <div class="posts-index-item">
+      <div class="user-index-item">
         <div class="post-right">
           <%= link_to(post.content, "/posts/#{post.id}", style: "color: black;") %>
           <br>
@@ -21,7 +21,7 @@
       </div>
     <% end %>
     <% @user.liked_posts.each do |post| %>
-      <div class="posts-index-item">
+      <div class="user-index-item">
         <div class="post-right">
           <p>いいねリスト</p>
           <%= post.user.name %>

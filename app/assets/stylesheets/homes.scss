@@ -343,6 +343,17 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 button,
 select {
   text-transform: none;
@@ -379,6 +390,10 @@ button:not(:disabled),
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
+}
+
+textarea {
+  resize: vertical;
 }
 
 fieldset {
@@ -2369,6 +2384,16 @@ progress {
           margin-inline-end: 1rem;
 }
 
+textarea.form-control {
+  min-height: calc(1.5em + 0.75rem + 2px);
+}
+textarea.form-control-sm {
+  min-height: calc(1.5em + 0.5rem + 2px);
+}
+textarea.form-control-lg {
+  min-height: calc(1.5em + 1rem + 2px);
+}
+
 .form-control-color {
   width: 3rem;
   height: auto;
@@ -2801,6 +2826,11 @@ progress {
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
+.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
+  padding-right: calc(1.5em + 0.75rem);
+  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+}
+
 .was-validated .form-select:valid, .form-select.is-valid {
   border-color: #198754;
 }
@@ -2883,6 +2913,11 @@ progress {
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+  padding-right: calc(1.5em + 0.75rem);
+  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
 
 .was-validated .form-select:invalid, .form-select.is-invalid {
@@ -3860,12 +3895,6 @@ progress {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
-
-.card {
-  position: relative;
-  display: flex;
-}
-
 
 .accordion-button {
   position: relative;

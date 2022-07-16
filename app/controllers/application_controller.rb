@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
   #   admin_root_path
   # end
 
+  def after_sign_in_path_for(resource)
+    posts_path(resource)
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [ :encrypted_password,:name ]) 
   end
