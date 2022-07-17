@@ -33,7 +33,7 @@
               <% if current_user.avatar? %>
                 <%= image_tag current_user.avatar.url, class: 'user-image-header' %>
               <% else %>
-                <%= image_tag "/assets/default.png", class: 'user-header-image' %>
+                <%= image_tag "default.png", class: 'user-header-image' %>
               <% end %>
               <%= link_to("新規投稿", new_post_path, class: "new-buttom") %>
               <%= link_to("投稿一覧", posts_path, class: "nav-item nav-link") %>
