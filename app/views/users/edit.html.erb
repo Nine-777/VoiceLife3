@@ -13,13 +13,13 @@
           <% end %>
         <%= form_tag user_path(@user), method: :put, multipart: true do %>
           <p>ユーザー名</p>
-          <input name="name" value= "<%= @user.name %>">
+          <input name="name" style="width: 300px;" value= "<%= @user.name %>">
           <p>プロフィール</p>
-          <input name="profile" value= "<%= @user.self_introduction %>">
+          <textarea name="profile" cols="45" rows="3"><%= @user.self_introduction %></textarea>
           <p>画像</p>
           <input name="avatar" type="file">
           <p>メールアドレス</p>
-          <input name="email" value="<%= @user.email %>">
+          <input name="email" style="width: 300px;" value="<%= @user.email %>">
           <input type="submit" value="保存" class= 'user-edit-btn'>
         <% end %>  
         </div>
