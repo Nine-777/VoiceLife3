@@ -10,7 +10,7 @@
         <span class="profile-intro"><%= @user.self_introduction %></span>
       </div>
       <div class="profile-edit">
-        <% if current_user.id %>
+        <% if @user == current_user %>
           <%= link_to "編集", "/users/#{@user.id}/edit", style: "color: #8899a6;" %>
         <% end %>
       </div>

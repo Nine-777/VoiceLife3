@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :ensure_user, only: [:edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -32,6 +34,9 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find_by(id: params[:id])
+    unless @user == current_user
+      redirect_to  root_path
+    end
   end
   
   def update            
@@ -56,11 +61,11 @@ class UsersController < ApplicationController
     @likes = Like.where(user_id: @user.id)
   end
   
-  def ensure_correct_user
-    if @current_user.id != params[:id].to_i
-      flash[:notice] = "権限がありません"
-      redirect_to posts_path
-    end
+  private
+  def ensure_user
+    @user = current_user
+    flash[:notice] = "権限がありません"
+    redirect_to root_path unless @user
   end
 
 end
