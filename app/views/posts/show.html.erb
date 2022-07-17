@@ -33,19 +33,25 @@
           <%= link_to("削除", post_path, {method: "delete"}) %>
         <% end %>
       </div>
-      <p>いいねしたユーザー</p>
+      <div class="post-show-liked">
+        <p>いいねしたユーザー</p>
+      </div>
+      <hr>
       <% @post.liked_users.each do |user| %>
         <div class="liked_user">
+          <%= image_tag user.avatar.url, class: 'post-liked-image' %>
           <%= user.name %>
         </div>
       <% end %>
-      <h5>コメント一覧</h5>
+      <div class="post-show-comment">
+        <h5>コメント一覧</h5>
+      </div>
+      <hr>
       <% @comments.each do |c| %>
-          <%= image_tag c.user.avatar.url, class: 'comment-image' %>
-          <%= link_to(c.user.name, "/users/#{@user.id}", style: "color: black;") %>
-          <%= c.comment %>
-          <%= c.created_at.to_s(:datetime_jp) %>
-          <hr>
+        <%= image_tag c.user.avatar.url, class: 'comment-image' %>
+        <%= link_to(c.user.name, "/users/#{@user.id}", style: "color: black;") %>
+        <%= c.comment %>
+        <%= c.created_at.to_s(:datetime_jp) %>
       <% end %>
       <%= form_with model: @comment, url: comments_path do |f| %>
         <%= hidden_field_tag 'comment[post_id]', @post.id %>
