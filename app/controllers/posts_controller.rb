@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :current_user, {only: [:edit, :update, :destroy]}
+  before_action :authenticate_user!
+  before_action :ensure_user, only: [:edit, :update, :destroy]
  
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
@@ -56,14 +57,6 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-  def ensure_correct_user
-    @post = Post.find_by(id: params[:id])
-    if @post.user_id != @current_user.id
-      flash[:notice] = "権限がありません"
-      redirect_to posts_path
-    end
-  end
-
   def post_params
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end
@@ -72,6 +65,14 @@ class PostsController < ApplicationController
     @posts = Post.search(params[:keyword])
     @keyword = params[:keyword]
     render "index"
+  end
+
+  private
+  def ensure_user
+    @posts = current_user.posts
+    @post = @posts.find_by(id: params[:id])
+    flash[:notice] = "権限がありません"
+    redirect_to root_path unless @post
   end
   
 end

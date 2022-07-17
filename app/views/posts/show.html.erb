@@ -28,8 +28,10 @@
         <%= @post.created_at.to_s(:datetime_jp) %>
       </div>
       <div class="post-menus">
-        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
-        <%= link_to("削除", post_path, {method: "delete"}) %>
+        <% if @post.user == current_user %>
+          <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+          <%= link_to("削除", post_path, {method: "delete"}) %>
+        <% end %>
       </div>
       <p>いいねしたユーザー</p>
       <% @post.liked_users.each do |user| %>
