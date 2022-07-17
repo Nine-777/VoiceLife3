@@ -71,8 +71,10 @@ class PostsController < ApplicationController
   def ensure_user
     @posts = current_user.posts
     @post = @posts.find_by(id: params[:id])
-    flash[:notice] = "権限がありません"
-    redirect_to root_path unless @post
+    unless @post
+      flash[:alert] = "権限がありません"
+      redirect_to root_path
+    end
   end
   
 end

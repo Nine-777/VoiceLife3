@@ -51,6 +51,16 @@
       </div>
     </div>
   </nav>
+  <% if flash[:notice] %>
+    <div class="notice-flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="alert-flash">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
   <body>
     <%= yield %>
   </body>

@@ -97,6 +97,32 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
 }
 
+.notice-flash {
+  padding: 10px 0;
+  color: white;
+  background: rgb(56, 210, 0);
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+.alert-flash {
+  padding: 10px 0;
+  color: white;
+  background: rgb(255, 56, 56);
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }

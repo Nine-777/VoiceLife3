@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       redirect_to user_path(@user)
       flash[:notice] = "ユーザー登録が完了しました"
     else
-      flash[:error] = "作成に失敗しました"
+      flash[:alert] = "作成に失敗しました"
       render ("users/new")
     end
   end
@@ -35,6 +35,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find_by(id: params[:id])
     unless @user == current_user
+      flash[:alert] = "権限がありません"
       redirect_to  root_path
     end
   end
@@ -52,10 +53,7 @@ class UsersController < ApplicationController
       render("users/edit")        
     end
   end
-  
-  def login_form
-  end
-    
+      
   def likes
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
@@ -64,8 +62,10 @@ class UsersController < ApplicationController
   private
   def ensure_user
     @user = current_user
-    flash[:notice] = "権限がありません"
-    redirect_to root_path unless @user
+    unless @user
+      flash[:alert] = "権限がありません"
+      redirect_to root_path
+    end
   end
 
 end
