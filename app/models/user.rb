@@ -33,7 +33,7 @@ class User < ApplicationRecord
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
   end
-  has_many :comments
+  has_many :comments, dependent: :destroy
   mount_uploader :avatar, AvatarUploader 
 
   def self.guest
