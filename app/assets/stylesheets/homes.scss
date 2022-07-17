@@ -1967,21 +1967,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-.table {
-  --bs-table-bg: transparent;
-  --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #212529;
-  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #212529;
-  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #212529;
-  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #212529;
-  vertical-align: top;
-  border-color: #dee2e6;
-}
+
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: var(--bs-table-bg);
@@ -2028,107 +2014,6 @@ progress {
 .table-active {
   --bs-table-accent-bg: var(--bs-table-active-bg);
   color: var(--bs-table-active-color);
-}
-
-.table-hover > tbody > tr:hover > * {
-  --bs-table-accent-bg: var(--bs-table-hover-bg);
-  color: var(--bs-table-hover-color);
-}
-
-.table-primary {
-  --bs-table-bg: #fde0d8;
-  --bs-table-striped-bg: #f0d5cd;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #e4cac2;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #eacfc8;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #e4cac2;
-}
-
-.table-secondary {
-  --bs-table-bg: #e2e3e5;
-  --bs-table-striped-bg: #d7d8da;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #cbccce;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d1d2d4;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #cbccce;
-}
-
-.table-success {
-  --bs-table-bg: #d1e7dd;
-  --bs-table-striped-bg: #c7dbd2;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #bcd0c7;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #c1d6cc;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #bcd0c7;
-}
-
-.table-info {
-  --bs-table-bg: #cff4fc;
-  --bs-table-striped-bg: #c5e8ef;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #badce3;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #bfe2e9;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #badce3;
-}
-
-.table-warning {
-  --bs-table-bg: #fff3cd;
-  --bs-table-striped-bg: #f2e7c3;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #e6dbb9;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #ece1be;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #e6dbb9;
-}
-
-.table-danger {
-  --bs-table-bg: #f8d7da;
-  --bs-table-striped-bg: #eccccf;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #dfc2c4;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #e5c7ca;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #dfc2c4;
-}
-
-.table-light {
-  --bs-table-bg: #f8f9fa;
-  --bs-table-striped-bg: #ecedee;
-  --bs-table-striped-color: #000;
-  --bs-table-active-bg: #dfe0e1;
-  --bs-table-active-color: #000;
-  --bs-table-hover-bg: #e5e6e7;
-  --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #dfe0e1;
-}
-
-.table-dark {
-  --bs-table-bg: #212529;
-  --bs-table-striped-bg: #2c3034;
-  --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #373b3e;
-  --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #323539;
-  --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #373b3e;
 }
 
 .table-responsive {
@@ -2290,9 +2175,7 @@ progress {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #dde0e3;
-}
+
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
@@ -10534,7 +10417,29 @@ hr.divider-light {
   border-radius: 10rem;
 }
 
-.nav-buttom2 {
+.easy-login-buttom {
+  background-color: #fd6339;
+  color: #fff;
+  height: 30px;
+  margin-left: 0.5rem;
+  margin-top: 3px;
+  font-weight: 900;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  padding: 0.2rem 1.0rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
+.easy-login-buttom:hover{
+  background-color: #ec5a31;
+  color: white;
+  text-decoration: none;
+}
+
+.new-buttom {
   background-color: #fd6339;
   color: #fff;
   height: 30px;
@@ -10549,6 +10454,12 @@ hr.divider-light {
   text-transform: uppercase;
   border: none;
   border-radius: 10rem;
+}
+
+.new-buttom:hover{
+  background-color: #ec5a31;
+  color: white;
+  text-decoration: none;
 }
 
 .nav-buttom:hover {
@@ -10667,7 +10578,4 @@ header.masthead h1, header.masthead .h1 {
 }
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
   font-size: 1.2rem;
-}
-#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
-  opacity: 1;
 }

@@ -112,7 +112,7 @@
   .post-index-image {
     width: 50px;
     height: 50px;
-    border-radius: 40%;
+    border-radius: 60%;
     margin-left: -40px;
   }
 
@@ -126,6 +126,7 @@
     height: 30px;
     margin-top: 3px;
     margin-left: -3px;
+    border-radius: 60%;
   }
   
   .user-profile {
@@ -231,7 +232,7 @@
     width: 110px;
     height: 110px;
     border: #fff 3px solid;
-    border-radius: 55px;
+    border-radius: 60%;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
@@ -240,7 +241,6 @@
   .profile-thumb img{
     display: block;
     width: 100%;
-    height: auto;
   }
   
   .profile-content{
@@ -348,4 +348,10 @@
     float: right;
     margin-right: 50px;
     margin-bottom: -70px;
+  }
+
+  .user-edit-btn:hover{
+    background-color: #ec5a31;
+    color: white;
+    text-decoration: none;
   }

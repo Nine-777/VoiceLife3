@@ -229,7 +229,7 @@
   }
 
   .liked_user {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -20px;
     line-height: 60px;
   }
@@ -284,6 +284,11 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 95px;
+  }
+
+  .post-new-btn:hover{
+    background-color: #ec5a31;
+    text-decoration: none;
   }
   
   .posts-new textarea::-webkit-input-placeholder {
@@ -341,6 +346,12 @@
     margin-right: 7px;
   }
 
+  .post-edit-btn:hover{
+    background-color: #ec5a31;
+    color: white;
+    text-decoration: none;
+  }
+
   .post-edit-main {
     background-position: center;
     background-repeat: no-repeat;
@@ -352,7 +363,22 @@
     display: flex;
   }
 
+  .post-liked-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+  }
+
   .comment-image {
     width: 30px;
     height: 30px;
+    border-radius: 60%;
+  }
+
+  .post-show-liked {
+    
+  }
+
+  .post-show-comment {
+    margin-top: 15px;
   }
