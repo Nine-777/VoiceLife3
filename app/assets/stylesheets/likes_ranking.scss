@@ -9,6 +9,13 @@
   box-shadow: 0 2px 6px #c1ced7;
 }
 
+.user_new_cardname {
+  padding: 0.5em;/*文字周りの余白*/
+  color: #494949;/*文字色*/
+  background: #fbedea;/*背景色*/
+  border-left: solid 5px #fc6851;/*左線（実線 太さ 色）*/
+}
+
 .rank-image {
   width: 25px;
   height: 25px;

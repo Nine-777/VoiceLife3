@@ -45,14 +45,6 @@
   }
   
   /* users/show ================================ */
-  .user-container {
-    max-width: 600px;
-    margin: 0px auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    min-height: 74vh;
-  }
-
   .user-main {
     background: rgb(231, 231, 231) url(https://goo.gl/DM5s4f) center no-repeat;
     background-size: cover;
@@ -65,6 +57,46 @@
     background-size: cover;
     padding-bottom: calc(10rem - 0rem);
     padding-top: 10rem;
+  }
+
+  .user-show-container {
+    width: 530px;
+    min-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-show-main {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 335px;
+    background: linear-gradient(rgba(238, 238, 238, 0.896) 0%, rgba(238, 238, 238, 0.896));
+    display: flex;
+  }
+
+  .user-show-time {
+    color: #8899a6;
+  }
+
+  .user-show-liked {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0.5em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #fffaf4;/*背景色*/
+    border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  }
+
+  .user-show-liked {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0.5em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #fffaf4;/*背景色*/
+    border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
   }
 
   .user-image {
@@ -178,6 +210,84 @@
     padding: 16px 30px;
     color: #afb6bf;
   }
+
+  .profile-card{
+    max-width: 530px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .profile-card:before{
+   width:160%;
+   height:120px;
+   content:"";
+   transform:skew(15deg,10deg);
+   background: #f59505; /*斜め背景の色*/
+   position:  absolute;
+   top:-5%;
+   left:-10%;
+   z-index: 0;
+  }
+  
+  .profile-card__inner{
+   position: relative;
+   padding-top: 10px;
+  }
+  
+  .profile-thumb{
+    overflow: hidden;
+    width: 110px;
+    height: 110px;
+    border: #fff 3px solid;
+    border-radius: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+  }
+  
+  .profile-thumb img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .profile-content{
+    padding: 15px;
+  }
+  
+  .profile-content span{
+    display: block;
+  }
+  
+  .profile-name {
+    margin-bottom: 3px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .profile-job {
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  .profile-intro {
+    font-size: 16px;
+    padding: 15px 15px;
+  }
+
+  .profile-edit {
+    font-size: 16px;
+    float: right;
+    margin-top: -25px;
+    margin-right: 10px;
+  }
   
   /* users/new ================================ */
   .users-form input {
@@ -185,10 +295,12 @@
   }
 
   .user-show-item {
-    padding: 20px 30px;
+    padding: 30px;
     background-color: white;
-    overflow: hidden;
     box-shadow: 0 2px 6px #c1ced7;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .user-index-item {
@@ -199,6 +311,10 @@
   }
 
   /* users/edit ================================ */
+  .user-edit-heading {
+    color: rgb(54, 52, 52) ;
+    font-size: 30px;
+  }
 
   .user-edit-main {
     background-position: center;
@@ -227,11 +343,6 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .user-edit-heading {
-    color: rgb(54, 52, 52) ;
-    font-size: 30px;
   }
 
   .user-edit-btn {
