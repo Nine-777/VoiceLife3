@@ -1,3 +1,17 @@
+  .post-card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 10px 10px;
+    margin-top: 20px;
+  }
+
+  hr {
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.25;
+  }
+  
   .post-index-main {
     background-position: center;
     background-repeat: no-repeat;

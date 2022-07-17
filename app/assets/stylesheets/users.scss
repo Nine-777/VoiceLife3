@@ -221,18 +221,6 @@
     margin-right: auto;
   }
   
-  .profile-card:before{
-   width:160%;
-   height:120px;
-   content:"";
-   transform:skew(15deg,10deg);
-   background: #f59505; /*斜め背景の色*/
-   position:  absolute;
-   top:-5%;
-   left:-10%;
-   z-index: 0;
-  }
-  
   .profile-card__inner{
    position: relative;
    padding-top: 10px;

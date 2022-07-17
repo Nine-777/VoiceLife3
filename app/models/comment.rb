@@ -14,11 +14,6 @@
 #  index_comments_on_post_id  (post_id)
 #  index_comments_on_user_id  (user_id)
 #
-# Foreign Keys
-#
-#  fk_rails_...  (post_id => posts.id)
-#  fk_rails_...  (user_id => users.id)
-#
 class Comment < ApplicationRecord
   validates :comment, {length: {maximum: 140}}
     belongs_to :post
