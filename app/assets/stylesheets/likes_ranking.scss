@@ -10,15 +10,22 @@
 }
 
 .user_new_cardname {
-  padding: 0.5em;/*文字周りの余白*/
+  padding: 0.2em;/*文字周りの余白*/
   color: #494949;/*文字色*/
   background: #fbedea;/*背景色*/
   border-left: solid 5px #fc6851;/*左線（実線 太さ 色）*/
+  margin-bottom: 20px;
+}
+
+.user_new_cardname h5 {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-weight: bold;
 }
 
 .rank-image {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .likes_count {
@@ -31,7 +38,6 @@
 }
 
 .card_content {
-  display: flex;
   margin-top: -10px;
   width: 250px;
   font-size: 20px;

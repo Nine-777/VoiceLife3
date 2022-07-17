@@ -1,22 +1,21 @@
 <div class="post-index-main">
   <div class="user_new_card" style="width: 22rem;">
     <div class="user_new_cardname">
-      <h4><span>いいねランキング</span></h4>
+      <h5>いいねランキング</h5>
     </div>
-    <hr>
     <% @all_ranks.each.with_index(1) do |post, i| %>
       <% if i == 1 %>
-        <img src="gold_crown.svg" width="32" height="32">
+        <img src="gold_crown.svg" width="26" height="26">
       <% elsif i == 2 %>
-        <img src="silver_crown.svg" width="32" height="32">
+        <img src="silver_crown.svg" width="26" height="26">
       <% elsif i == 3 %>
-        <img src="copper_crown.svg" width="32" height="32">
+        <img src="copper_crown.svg" width="26" height="26">
       <% else %>
        <%= i %> 位
       <% end %>
       <%= image_tag post.user.avatar.url, class: 'rank-image', size: '500x240' %>
       <%= link_to(post.user.name, "/users/#{post.user.id}", style: "color: black;") %>
-      <div class="card-body">
+      <div class="post-card-body">
         <h6 class="card_content">
           <%= post.content %>
           <i class="fas fa-heart unlike-btn" ></i>
