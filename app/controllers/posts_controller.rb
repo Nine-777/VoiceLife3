@@ -1,10 +1,17 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :ensure_user, only: [:edit, :update, :destroy]
+  before_action :search
  
+  def search
+    @q = Post.ransack(params[:q])
+  end
+
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(10).pluck(:post_id))
+    @q = Post.ransack(params[:q])
+    @post = @q.result(distinct: true)
   end
 
   def show
@@ -59,12 +66,6 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
-  end
-
-  def search
-    @posts = Post.search(params[:keyword])
-    @keyword = params[:keyword]
-    render "index"
   end
 
   private
