@@ -312,8 +312,14 @@
     outline : none;
     width: 5.0em;
     height: 1.9em;
+    margin-bottom: 4px;
     display: inline-block;
     vertical-align: middle;  
+  }
+
+  .comment-btn:hover{
+    background-color: #ec5a31;
+    text-decoration: none;
   }
 
   /* posts/show ================================ */

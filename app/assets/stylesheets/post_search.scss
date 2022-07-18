@@ -1,0 +1,42 @@
+.search_main {
+    color: black;
+    margin-bottom: auto;
+    width: 400px;
+    margin-top: 22px;
+    margin-left: -370px;
+    background-color: white;
+    padding: 0.75rem 1.25rem;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.search_container {
+    padding: 0.2em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    margin-bottom: 20px;
+}
+
+  .search_content {
+    margin-top: -10px;
+    width: 250px;
+    font-size: 20px;
+}
+
+.search-btn {
+    color: black;
+    width: 60px;
+    height: 30px;
+    font-size: 1.0em;
+    border: none;
+    background: #fd6339;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+  }
+
+  .search-btn:hover{
+    background-color: #ec5a31;
+    text-decoration: none;
+  }

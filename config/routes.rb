@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'comments/destroy'
   root "homes#index"
   devise_for :users
-  get 'search' => 'posts#search'
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
   end
@@ -18,5 +17,10 @@ Rails.application.routes.draw do
   resources :comments
   resources :posts, only: [:index, :show, :create] do
     resources :likes, only: [:create, :destroy]
+  end
+  resources :posts do
+    collection do
+      get 'search'
+    end
   end
 end
