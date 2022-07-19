@@ -53,6 +53,13 @@ class UsersController < ApplicationController
       render("users/edit")        
     end
   end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    flash[:notice] = "ユーザーを削除しました"
+    redirect_to root_path
+  end
       
   def likes
     @user = User.find_by(id: params[:id])

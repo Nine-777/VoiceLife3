@@ -13,6 +13,7 @@
       <div class="profile-edit">
         <% if @user == current_user %>
           <%= link_to "編集", "/users/#{@user.id}/edit", style: "color: #8899a6;" %>
+          <%= link_to "削除", user_path, style: "color: #8899a6;", method: "delete" %>
         <% end %>
       </div>
     </div>
@@ -36,6 +37,7 @@
     <% @user.liked_posts.each do |post| %>
       <div class="user-index-item">
         <div class="post-right">
+          <%= image_tag post.user.avatar.url, class: 'user-liked-image' %>
           <%= link_to(post.user.name, "/users/#{post.user.id}", style: "color: black;") %>
           <%= link_to(post.content, "/posts/#{post.id}", style: "color: black;") %>
         </div>
