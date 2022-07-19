@@ -10,8 +10,12 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.page(params[:page]).per(10).order(created_at: :desc)
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
-    @q = Post.ransack(params[:q])
-    @post = @q.result(distinct: true)
+    if params[:q]
+      @q = Post.ransack(params[:q])
+      @post = @q.result(distinct: true)
+    else
+      @post = []
+    end
   end
 
   def show
