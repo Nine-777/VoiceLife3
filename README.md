@@ -5,6 +5,8 @@
 
 <img width="600" alt="スクリーンショット 2022-07-18 19 36 38" src="https://user-images.githubusercontent.com/97382295/179966494-aaec1ab8-67f8-48b7-be25-f4fb93698df1.png">
 
+#### かんたんログインでお試しください。
+<img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
 
 ### 機能一覧
 - ユーザー登録・編集・削除
