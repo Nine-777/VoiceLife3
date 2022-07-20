@@ -1,4 +1,4 @@
-# VoiceLife
+<h2 align="center">VoiceLife</h2>
 
 
 ### 音声を簡単に投稿できるSNSサイトです。
