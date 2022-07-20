@@ -8,6 +8,20 @@
 #### かんたんログインでお試しください。
 <img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
 
+
+
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/97382295/179974203-f28eb3df-854f-486d-bf8f-9ebc9276e87d.png">
+
+
+</p>
+  <br>
+  <a href="PWA公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
+  <a href="Firebase公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
+  <a href="firealpaca公式サイトURL"><img src="https://〜.png" height="40px;" /></a>
+  <a href="sweetalert公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
+
+
 ### 機能一覧
 - かんたんログイン(devise,devise-18n)
 - ユーザー登録・編集・削除
