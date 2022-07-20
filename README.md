@@ -1,11 +1,11 @@
-<h2 align="center">VoiceLife</h2>
+<h1 align="center">VoiceLife</h1>
 
 
-### 音声を簡単に投稿できるSNSサイトです。
+<h3 align="center">音声を簡単に投稿できるSNSサイトです。</h3>
 
 <img width="600" alt="スクリーンショット 2022-07-18 19 36 38" src="https://user-images.githubusercontent.com/97382295/179966494-aaec1ab8-67f8-48b7-be25-f4fb93698df1.png">
 
-#### かんたんログインでお試しください。
+<h3 align="center">かんたんログインでお試しください。</h3>
 <img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
 
 
