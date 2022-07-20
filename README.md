@@ -9,16 +9,16 @@
 <img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
 
 ### 機能一覧
+- かんたんログイン(devise,devise-18n)
 - ユーザー登録・編集・削除
-- かんたんログイン
+- ユーザープロフィール画像設定(carrierwave)
 - テキスト投稿・削除・編集
-- 画像投稿・編集・削除
-- 音声投稿・視聴
+- 音声投稿・視聴(audiojs-rails)
 - いいね機能
 - いいねランキング
 - コメント機能
-- キーワード検索
-- ページネーション
+- キーワード検索(ransack)
+- ページネーション(kaminari,bootstrap)
 
 
 ### 技術一覧
