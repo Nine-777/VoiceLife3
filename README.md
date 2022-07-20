@@ -2,12 +2,14 @@
 
 
 <h3 align="center">音声を簡単に投稿できるSNSサイトです。</h3>
-
+<p align="center">
 <img width="600" alt="スクリーンショット 2022-07-18 19 36 38" src="https://user-images.githubusercontent.com/97382295/179966494-aaec1ab8-67f8-48b7-be25-f4fb93698df1.png">
+</p>
 
 <h3 align="center">かんたんログインでお試しください。</h3>
+<p align="center">
 <img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
-
+</p>
 
 <p align="center">
 <img width="80" src="https://user-images.githubusercontent.com/97382295/179974203-f28eb3df-854f-486d-bf8f-9ebc9276e87d.png">
