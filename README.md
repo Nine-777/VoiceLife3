@@ -1,7 +1,9 @@
 # VoiceLife
 
+
 音声を簡単に投稿できるSNSサイトです。
 <img width="３００" alt="スクリーンショット 2022-07-18 19 36 38" src="https://user-images.githubusercontent.com/97382295/179966494-aaec1ab8-67f8-48b7-be25-f4fb93698df1.png">
+
 
 ### 機能一覧
 - ユーザー登録・編集・削除
@@ -14,6 +16,7 @@
 - コメント機能
 - キーワード検索
 - ページネーション
+
 
 ### 技術一覧
 - Ruby 3.0.4
