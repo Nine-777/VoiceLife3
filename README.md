@@ -39,6 +39,11 @@
 - Ruby 3.0.4
 - Ruby on Rails 6.1.6
 - MySQL 5.7
-- AWS: EC2,RDS,EB,Route 53,IAM
+- AWS
+  - EC2
+  - RDS
+  - EB
+  - Route 53
+  - IAM
 - HTML
 - CSS(SCSS)
