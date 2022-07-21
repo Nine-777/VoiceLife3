@@ -12,6 +12,11 @@
 <img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
 </p>
 
+<h3 align="center">簡単に音声投稿、試聴ができます。</h3>
+<p align="center">
+<img width="600" src="https://user-images.githubusercontent.com/97382295/180214559-5a07400c-a865-4ac1-b7c0-18a7e56fe789.gif">
+</p>
+
 <p align="center">
 <img width="80" src="https://user-images.githubusercontent.com/97382295/179974203-f28eb3df-854f-486d-bf8f-9ebc9276e87d.png">
 <img width="170" src="https://user-images.githubusercontent.com/97382295/179975458-64dc783f-70c8-4982-8258-957c957cb4cf.svg">
