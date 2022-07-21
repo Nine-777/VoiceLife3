@@ -7,7 +7,7 @@
 <img width="600" alt="スクリーンショット 2022-07-18 19 36 38" src="https://user-images.githubusercontent.com/97382295/179966494-aaec1ab8-67f8-48b7-be25-f4fb93698df1.png">
 </p>
 
-<h3 align="center">かんたんログインでお試しください。</h3>
+<h3 align="center">ゲストログインでお試しください。</h3>
 <p align="center">
 <img width="600" src="https://user-images.githubusercontent.com/97382295/179971610-7961cf6c-189d-43b8-b312-a4fd64f7cc1f.gif">
 </p>
@@ -28,7 +28,7 @@
 
 
 ### 機能一覧
-- かんたんログイン(devise,devise-18n)
+- ゲストログイン(devise,devise-18n)
 - ユーザー登録・編集・削除
 - ユーザープロフィール画像設定(carrierwave)
 - テキスト投稿・編集・削除
