@@ -1,7 +1,7 @@
 <h1 align="center">VoiceLife</h1>
 
 <h3 align="center">http://voicelife-world.com/</h3>
-<h3 align="center">音声を簡単に投稿できるSNSサービスです。</h3>
+<h3 align="center">簡単に音声を投稿できるSNSサービスです。</h3>
 
 <p align="center">
 <img width="600" alt="スクリーンショット 2022-07-18 19 36 38" src="https://user-images.githubusercontent.com/97382295/179966494-aaec1ab8-67f8-48b7-be25-f4fb93698df1.png">
