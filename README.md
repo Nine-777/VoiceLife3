@@ -51,5 +51,6 @@
   - EB
   - Route 53
   - IAM
+- RSpec(テスト)
 - HTML
 - CSS(SCSS)
