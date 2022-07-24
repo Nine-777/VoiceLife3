@@ -44,6 +44,7 @@
 ### 技術一覧
 - Ruby 3.0.4
 - Ruby on Rails 6.1.6
+- RSpec(テスト)
 - MySQL 5.7
 - AWS
   - EC2
@@ -51,6 +52,5 @@
   - EB
   - Route 53
   - IAM
-- RSpec(テスト)
 - HTML
 - CSS(SCSS)
