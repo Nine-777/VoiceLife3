@@ -23,5 +23,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  get 'welcomes/index'
+  get 'tutorial/index'
 end
