@@ -1,9 +1,9 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.scss';
 import Lesson from './Lesson';
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-class Tutorial extends React.Component {
+class NewPost extends React.Component {
   render() {
     // const lessonList = [
     //   {
@@ -29,28 +29,43 @@ class Tutorial extends React.Component {
     // ];
 
     return (
-      <div className='tutorial_wrapper'>
+      <><div className='tutorial_wrapper'>
         <div className='tutorial_main'>
           <div className='tutorial_container'>
-            <h1>ログインありがとうございます！</h1>
+            <h1>新規投稿してみよう！</h1>
             <h2>VoiceLifeへようこそ!</h2>
           </div>
           {/* <div className='tutorial_container'>
-            <h3></h3>
-            {lessonList.map((lessonItem) => {
-              return (
-                <Lesson
-                  name={lessonItem.name}
-                  image={lessonItem.image}
-                  introduction={lessonItem.introduction}
-                />
-              );
-            })}
-          </div> */}
+      <h3></h3>
+      {lessonList.map((lessonItem) => {
+        return (
+          <Lesson
+            name={lessonItem.name}
+            image={lessonItem.image}
+            introduction={lessonItem.introduction}
+          />
+        );
+      })}
+    </div> */}
         </div>
-      </div>
+      </div><>
+      <Carousel>
+        <div>
+          <img src="assets/1.jpeg" />
+          <p className="legend">Legend 1</p>
+        </div>
+        <div>
+          <img src="assets/2.jpeg" />
+          <p className="legend">Legend 2</p>
+        </div>
+        <div>
+          <img src="assets/3.jpeg" />
+          <p className="legend">Legend 3</p>
+        </div>
+      </Carousel>
+        </></>
     );
   }
 }
 
-export default Tutorial;
+export default NewPost;
