@@ -1,11 +1,11 @@
 import React from 'react';
-import Tutorial from './Tutorial';
+import NewPost from './NewPost';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Tutorial />
+        <NewPost />
       </div>
     );
   }
