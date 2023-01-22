@@ -13,12 +13,12 @@ default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Voice_saikyou_777
-  host: localhost
+  password: Voice_life_777
+  host: db
 
 development:
   <<: *default
-  database: VoiceLife3_development
+  database: docker_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
