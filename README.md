@@ -46,7 +46,7 @@
 - Ruby on Rails 6.1.6
 - RSpec(テスト)
 - MySQL 5.7
-- Docker
+- Docker 2.12.1
 - AWS
   - EC2
   - RDS
